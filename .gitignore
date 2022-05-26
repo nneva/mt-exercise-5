@@ -131,12 +131,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+tools
 venvs
 shared_models
 data
-models
+samples
 translations
+models
 logs
-tools
+.vscode
 
 .DS_Store

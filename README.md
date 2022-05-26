@@ -15,7 +15,7 @@ data and train & evaluate models.
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/emmavdbold/mt-exercise-5
+    git clone https://github.com/nneva/mt-exercise-5
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -33,12 +33,58 @@ Download data:
 
 The data is only minimally preprocessed, so you may want to tokenize it and apply any further preprocessing steps.
 
-Train a model:
+Preprocess data:
+
+    ./scripts/preprocess.sh
+
+This command creates directory `samples` and stores dev and test data in it. 
+
+It also executes `subsample.py`, which subsamples originally downloaded train data based on the desired number of lines, and stores them also in `samples` directory. 
+
+Train, dev and test data are tokenized with Moses Tokenizer. 
+
+Train a word level model:
 
     ./scripts/train.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
-Evaluate a trained model with
+Train BPE level models:
+
+    ./scripts/train_bpe.sh
+
+By running this script BPE is learned and applied, and respective vocabulary is built prior to start of the training. 
+
+To initialize the training with different vocab size, change the `bpe_num_operations` value in this script.
+
+This will automatically load different configuration, if such is present in configs directory, and named properly.
+
+See configurations in configs directory for more details.
+
+Evaluate a trained word level model with:
 
     ./scripts/evaluate.sh
+
+This script will create directory `translations`, with the subdirectory named after the model.
+
+Post-processing steps include detokenization of the test data.
+
+Results of the evaluation will be printed out in the terminal.
+
+Evaluate trained BPE level models with:
+
+    ./scripts/evaluate_bpe.sh
+
+To evaluate different BPE level models, change `model_name` in this script accordingly.
+
+This script will create additional subdirectorie(s) named after the model(s), where translations are stored.
+
+Post-processing steps include detokenization and removal of BPE from the test data.
+
+Results of the evaluation will be printed out in the terminal.
+
+If you decide to train and evaluate several BPE level models, make sure to run `train_bpe.sh` then `evaluate_bpe.sh` for the same model 
+
+before initializing train of the next BPE level model.
+
+
