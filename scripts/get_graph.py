@@ -7,12 +7,12 @@ import re
 def create_graph(bleu_score: List[float], beam_size: List[int]):
     """Create graph with beam size values on the x-axis and BLEU scores on the y-axis."""
 
-    COLORS = ["#486090", "#D7BFA6", "#4682B4", "#9CCCCC", "#7890A8","#DA70D6", "#20B2AA", "#90A8C0", "#A8A890"]
+    COLORS = ["#486090", "#F3CFC6", "#4682B4", "#9CCCCC", "#7890A8","#FAA0A0", "#20B2AA", "#90A8C0", "#A8A890"]
 
     # make plot
     plt.plot(beam_size, bleu_score, '-', color = COLORS[3], marker="o")
     plt.gca().get_xaxis().get_major_formatter().set_useOffset(False)
-    plt.axis([0, 30, 21.0, 25.0])
+    plt.axis([0, 40, 21.5, 25.0])
     
     # color axis points
     plt.tick_params(axis='x', colors=COLORS[5])
@@ -27,7 +27,7 @@ def create_graph(bleu_score: List[float], beam_size: List[int]):
     plt.xlabel("Beam Size", fontname="Andale Mono", fontsize=14, color=COLORS[5])
     plt.ylabel("BLEU", fontname="Andale Mono", fontsize=14, color = COLORS[2])
     
-    plt.grid(True, color=COLORS[1])
+    plt.grid(True, color=COLORS[1], linestyle="--", linewidth=0.6)
     plt.savefig("bleu_beam_graph.png")
     
 

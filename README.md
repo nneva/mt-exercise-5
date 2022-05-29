@@ -88,7 +88,7 @@ Results of the evaluation will be printed out in the terminal.
 
 If you decide to train and evaluate several BPE level models, make sure to run `train_bpe.sh` then `evaluate_bpe.sh` for the same model before initializing training of the next BPE level model.
 
-💫 To get BLEU results for different `beam-size` values run:
+💫 To get BLEU results for different `beam size` values run:
 
     .scripts/vary_beam_size.sh | tee -a bleu_output.txt
 
@@ -102,11 +102,17 @@ Raw results of the performed evaluation for all `K` values can be found in `bleu
 
 📈 To get graph for BLEU - BEAM SIZE run:
 
-    scripts/get_graph.py
+    python scripts/get_graph.py
 
 
 
-# BPE - Experiment Results
+# Experiment Results
+
+- Translation direction: DE --> EN
+
+- Detailed analysis of the results will be submitted in PDF.
+
+**1 Byte Pair Encoding**
 
 |                   |    `use BPE`  |    vocab size   |     `BLEU`     | 
 |:------------------|:-------------:|:---------------:|---------------:|
@@ -116,11 +122,20 @@ Raw results of the performed evaluation for all `K` values can be found in `bleu
   
 
 
-**BLEU - Differences**
+**1.1 BLEU - Differences**
 
-**Manual Assessment**
+Experiment confirms that "subword representations cause big improvements in the translation of rare and unseen words"(Sennrich et al. ***"Neural Machine Translation of Rare Words with Subword Units"***) contributing to the overall better evaluation scores. The most significant improvement is observed in a difference between BLEU scores of a word-level model and BPE-level model with the same vocabulary size of 2000 tokens/subwords. 
 
-# Beam Size & Translation Quality
+
+**1.2 Manual Assessment**
+
+In order to make assessment as fair as possible, and since "human raters assessing adequacy and fluency show a stronger preference for human over machine translation when evaluating documents as compared to isolated sentences" (Läubli et al. ***"Has Machine Translation Achieved Human Parity?"*** ), assessment is performed on 15 randomly chosen isolated sentence pairs in a binary way: good - bad.
+
+**2 Beam Size & Translation Quality**
 
 ![Beam Size - BLEU score Relationship](bleu_beam_graph.png)
+
+The relationship graph between BLEU score and beam size roughly corresponds to the idea that "increasing the beam size does not consistently improve translation quality." (Kohen & Knowels - ***"Six Challenges for Neural Machine Translation"***). 
+
+Based on this specific case optimal beam size is between 8 and 16.  
 
