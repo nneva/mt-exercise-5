@@ -13,27 +13,29 @@ data and train & evaluate models.
 
 # Steps
 
-Clone this repository in the desired place:
+🧑‍🤝‍🧑 Clone this repository in the desired place:
 
     git clone https://github.com/nneva/mt-exercise-5
 
-Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
+💻 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
     ./scripts/make_virtualenv.sh
 
 **Important**: Then activate the env by executing the `source` command that is output by the shell script above.
 
-Download and install required software:
+🛠️ Download and install required software:
 
     ./scripts/download_install_packages.sh
 
-Download data:
+pip install for `PyYAML` is added.
+
+⬇️ Download data:
 
     ./download_iwslt_2017_data.sh
 
 The data is only minimally preprocessed, so you may want to tokenize it and apply any further preprocessing steps.
 
-Preprocess data:
+✂️ Preprocess data:
 
     ./scripts/preprocess.sh
 
@@ -43,13 +45,13 @@ It also executes `subsample.py`, which subsamples originally downloaded train da
 
 Train, dev and test data are tokenized with Moses Tokenizer. 
 
-Train a word level model:
+🤸 Train a word level model:
 
     ./scripts/train.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
-Train BPE level models:
+🤸 Train BPE level models:
 
     ./scripts/train_bpe.sh
 
@@ -61,9 +63,10 @@ This will automatically load different configuration, if such is present in conf
 
 See configurations in configs directory for more details.
 
-Evaluate a trained word level model with:
+📝 Evaluate a trained word level model with:
 
     ./scripts/evaluate.sh
+
 
 This script will create directory `translations`, with the subdirectory named after the model.
 
@@ -71,7 +74,7 @@ Post-processing steps include detokenization of the test data.
 
 Results of the evaluation will be printed out in the terminal.
 
-Evaluate trained BPE level models with:
+📝 Evaluate trained BPE level models with:
 
     ./scripts/evaluate_bpe.sh
 
@@ -83,8 +86,41 @@ Post-processing steps include detokenization and removal of BPE from the test da
 
 Results of the evaluation will be printed out in the terminal.
 
-If you decide to train and evaluate several BPE level models, make sure to run `train_bpe.sh` then `evaluate_bpe.sh` for the same model 
+If you decide to train and evaluate several BPE level models, make sure to run `train_bpe.sh` then `evaluate_bpe.sh` for the same model before initializing training of the next BPE level model.
 
-before initializing train of the next BPE level model.
+💫 To get BLEU results for different `beam-size` values run:
 
+    .scripts/vary_beam_size.sh | tee -a bleu_output.txt
+
+This script executes `parse_yaml.py` which takes as inputs path to the desired config file and `K` (**beam size**) values as defined in `scripts/vary_beam_size.py`. For every newly entered `K` value, the script will automatically generate respective configuration in .yaml format and replace with it already existing one.
+
+The script contains 10 different `K` values.
+
+Further, the script will call `evaluate_bpe.sh` to evaluate translation automatically for every newly entered `K` using `BLEU` as evaluation metric.
+
+Raw results of the performed evaluation for all `K` values can be found in `bleu_output.txt`.
+
+📈 To get graph for BLEU - BEAM SIZE run:
+
+    scripts/get_graph.py
+
+
+
+# BPE - Experiment Results
+
+|                   |    `use BPE`  |    vocab size   |     `BLEU`     | 
+|:------------------|:-------------:|:---------------:|---------------:|
+|        (a)        |      `no`     |      2000       |     `13.8`     |
+|        (b)        |      `yes`    |      2000       |     `20.7`     |            
+|        (c)        |      `yes`    |      12000      |     `24.0`     |
+  
+
+
+**BLEU - Differences**
+
+**Manual Assessment**
+
+# Beam Size & Translation Quality
+
+![Beam Size - BLEU score Relationship](bleu_beam_graph.png)
 
