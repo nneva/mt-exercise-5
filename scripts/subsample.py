@@ -4,6 +4,7 @@ import random
 
 
 def parse_args():
+    """Parse command line arguments."""
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--src-file", type=str, help="Path to source text file.", required=True)

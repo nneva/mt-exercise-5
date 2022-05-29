@@ -25,3 +25,6 @@ git clone https://github.com/joeynmt/joeynmt.git $tools/joeynmt
 # install Moses scripts for preprocessing
 
 git clone https://github.com/bricksdont/moses-scripts $tools/moses-scripts
+
+# install PyYAML for parsing a yaml-file (you maybe going to need to restart your editor, I had some issues with import)
+pip install PyYAML

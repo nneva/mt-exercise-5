@@ -11,8 +11,8 @@ logs=$base/logs
 samples=$base/samples
 tools=$base/tools
 
-src=en
-trg=de
+src=de
+trg=en
 lang=de-en
 
 bpe_num_operations=12000
