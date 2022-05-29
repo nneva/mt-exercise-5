@@ -136,9 +136,11 @@ venvs
 shared_models
 data
 samples
-translations
 models
 logs
-.vscode
+configs
+translations
+scripts
 
+.vscode
 .DS_Store
