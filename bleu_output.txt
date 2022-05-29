@@ -1,0 +1,214 @@
+add beam size: 1
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+add beam size: 1
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 22.2,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "54.2/28.2/16.4/9.7 (BP = 1.000 ratio = 1.026 hyp_len = 31967 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+545 seconds
+time taken:
+545 seconds
+###############################################################################
+add beam size: 2
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "56.6/30.3/18.0/10.8 (BP = 0.998 ratio = 0.998 hyp_len = 31096 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+331 seconds
+time taken:
+876 seconds
+###############################################################################
+add beam size: 3
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.1,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "57.0/30.8/18.2/11.0 (BP = 0.989 ratio = 0.989 hyp_len = 30821 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+510 seconds
+time taken:
+1386 seconds
+###############################################################################
+add beam size: 4
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.1,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "57.5/31.1/18.5/11.1 (BP = 0.978 ratio = 0.978 hyp_len = 30493 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+662 seconds
+time taken:
+2048 seconds
+###############################################################################
+add beam size: 8
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.3,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "57.9/31.5/18.8/11.4 (BP = 0.970 ratio = 0.971 hyp_len = 30256 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+1365 seconds
+time taken:
+3413 seconds
+###############################################################################
+add beam size: 12
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.3,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "58.3/31.8/19.0/11.6 (BP = 0.963 ratio = 0.963 hyp_len = 30032 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+1809 seconds
+time taken:
+5223 seconds
+###############################################################################
+add beam size: 16
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.3,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "58.3/31.9/19.1/11.6 (BP = 0.957 ratio = 0.958 hyp_len = 29862 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+2615 seconds
+time taken:
+7838 seconds
+###############################################################################
+add beam size: 20
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 24.2,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "58.6/32.1/19.3/11.8 (BP = 0.947 ratio = 0.948 hyp_len = 29561 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+3389 seconds
+time taken:
+11227 seconds
+###############################################################################
+add beam size: 28
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 23.5,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "58.8/32.4/19.5/11.9 (BP = 0.909 ratio = 0.913 hyp_len = 28463 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+4604 seconds
+time taken:
+15831 seconds
+###############################################################################
+add beam size: 36
+calculating BLEU...
+###############################################################################
+model_name transformer_bpe_12000
+{
+ "name": "BLEU",
+ "score": 22.6,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "59.2/32.8/19.9/12.2 (BP = 0.863 ratio = 0.872 hyp_len = 27174 ref_len = 31170)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+time taken:
+6217 seconds
+time taken:
+22048 seconds
+###############################################################################
