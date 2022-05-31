@@ -129,7 +129,7 @@ Experiment confirms that "subword representations cause big improvements in the 
 
 **1.2 Manual Assessment**
 
-In order to make assessment fair on a level of the machine output, and since "human raters assessing adequacy and fluency show a stronger preference for human over machine translation when evaluating documents as compared to isolated sentences" (Läubli et al. ***"Has Machine Translation Achieved Human Parity?"*** ), assessment is performed on 15 randomly chosen isolated sentence pairs.
+In order to make assessment fair on a level of the machine output, and since "human raters assessing adequacy and fluency show a stronger preference for human over machine translation when evaluating documents as compared to isolated sentences" (Läubli et al. ***"Has Machine Translation Achieved Human Parity?"*** ), assessment is performed on randomly chosen isolated sentence pairs.
 
 **2 Beam Size & Translation Quality**
 
