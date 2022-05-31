@@ -129,13 +129,11 @@ Experiment confirms that "subword representations cause big improvements in the 
 
 **1.2 Manual Assessment**
 
-In order to make assessment as fair as possible, and since "human raters assessing adequacy and fluency show a stronger preference for human over machine translation when evaluating documents as compared to isolated sentences" (Läubli et al. ***"Has Machine Translation Achieved Human Parity?"*** ), assessment is performed on 15 randomly chosen isolated sentence pairs in a binary way: good - bad.
+In order to make assessment fair on a level of the machine output, and since "human raters assessing adequacy and fluency show a stronger preference for human over machine translation when evaluating documents as compared to isolated sentences" (Läubli et al. ***"Has Machine Translation Achieved Human Parity?"*** ), assessment is performed on 15 randomly chosen isolated sentence pairs.
 
 **2 Beam Size & Translation Quality**
 
 ![Beam Size - BLEU score Relationship](bleu_beam_graph.png)
 
-The relationship graph between BLEU score and beam size roughly corresponds to the idea that "increasing the beam size does not consistently improve translation quality." (Kohen & Knowels - ***"Six Challenges for Neural Machine Translation"***). 
-
-Based on this specific case optimal beam size is between 8 and 16.  
+The relationship graph between BLEU score and beam size roughly corresponds to the idea that "increasing the beam size does not consistently improve translation quality." (Kohen & Knowels - ***"Six Challenges for Neural Machine Translation"***). Based on this specific case optimal beam size is between 8 and 16.  
 
