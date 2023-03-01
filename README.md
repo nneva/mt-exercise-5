@@ -1,4 +1,4 @@
-# MT Exercise 5: Byte Pair Encoding, Beam Search
+# Byte Pair Encoding, Beam Search
 
 This repo is just a collection of scripts showing how to install [JoeyNMT](https://github.com/joeynmt/joeynmt), download
 data and train & evaluate models.
@@ -15,7 +15,7 @@ data and train & evaluate models.
 
 🧑‍🤝‍🧑 Clone this repository in the desired place:
 
-    git clone https://github.com/nneva/mt-exercise-5
+    git clone https://github.com/nneva/bpe-beam-search
 
 💻 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -135,5 +135,5 @@ In order to make assessment fair on a level of the machine output, and since "hu
 
 ![Beam Size - BLEU score Relationship](bleu_beam_graph.png)
 
-The relationship graph between BLEU score and beam size roughly corresponds to the idea that "increasing the beam size does not consistently improve translation quality." (Kohen & Knowels - ***"Six Challenges for Neural Machine Translation"***). Based on this specific case optimal beam size is between 8 and 16.  
+The relationship graph between BLEU score and beam size roughly corresponds to the idea that "increasing the beam size does not consistently improve translation quality." (Koehn & Knowels - ***"Six Challenges for Neural Machine Translation"***). Based on this specific case optimal beam size is between 8 and 16.  
 
